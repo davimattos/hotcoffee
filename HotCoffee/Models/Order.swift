@@ -24,5 +24,5 @@ struct Order: Codable {
     let name: String
     let email: String
     let type: CoffeeType
-    let size: CoffeeType
+    let size: CoffeeSize
 }
