@@ -16,6 +16,7 @@
 		83FBC2412A93F1BE00F23DC1 /* AddOrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83FBC2402A93F1BE00F23DC1 /* AddOrderViewController.swift */; };
 		83FBC2442A94FD5700F23DC1 /* Webservice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83FBC2432A94FD5700F23DC1 /* Webservice.swift */; };
 		83FBC2472A95004800F23DC1 /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83FBC2462A95004800F23DC1 /* Order.swift */; };
+		83FBC24A2A95275B00F23DC1 /* OrderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83FBC2492A95275B00F23DC1 /* OrderViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		83FBC2402A93F1BE00F23DC1 /* AddOrderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddOrderViewController.swift; sourceTree = "<group>"; };
 		83FBC2432A94FD5700F23DC1 /* Webservice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Webservice.swift; sourceTree = "<group>"; };
 		83FBC2462A95004800F23DC1 /* Order.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Order.swift; sourceTree = "<group>"; };
+		83FBC2492A95275B00F23DC1 /* OrderViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 		83FBC2282A93EEE700F23DC1 /* HotCoffee */ = {
 			isa = PBXGroup;
 			children = (
+				83FBC2482A95273F00F23DC1 /* View Models */,
 				83FBC2452A95003B00F23DC1 /* Models */,
 				83FBC2422A94FD3F00F23DC1 /* Services */,
 				83FBC23D2A93EF1500F23DC1 /* Controllers */,
@@ -98,6 +101,14 @@
 				83FBC2462A95004800F23DC1 /* Order.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		83FBC2482A95273F00F23DC1 /* View Models */ = {
+			isa = PBXGroup;
+			children = (
+				83FBC2492A95275B00F23DC1 /* OrderViewModel.swift */,
+			);
+			path = "View Models";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -176,6 +187,7 @@
 				83FBC22C2A93EEE700F23DC1 /* SceneDelegate.swift in Sources */,
 				83FBC23F2A93F16D00F23DC1 /* OrdersTableViewController.swift in Sources */,
 				83FBC2442A94FD5700F23DC1 /* Webservice.swift in Sources */,
+				83FBC24A2A95275B00F23DC1 /* OrderViewModel.swift in Sources */,
 				83FBC2412A93F1BE00F23DC1 /* AddOrderViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
