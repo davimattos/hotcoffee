@@ -46,12 +46,64 @@
         <!--Add New Order-->
         <scene sceneID="C0M-ac-Fif">
             <objects>
-                <viewController id="Dcv-KR-iR6" customClass="AddOrderViewController" customModule="HotCoffee" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Dcv-KR-iR6" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="OO0-ft-3g1">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="802"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="W2v-Ei-K7Y">
+                                <rect key="frame" x="0.0" y="56" width="375" height="401"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="bvf-Ta-Aqa">
+                                        <rect key="frame" x="0.0" y="50" width="375" height="43.666667938232422"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="bvf-Ta-Aqa" id="3Qy-Sx-74s">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.666667938232422"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="XoR-3S-JRu">
+                                <rect key="frame" x="84.666666666666686" y="474" width="206" height="32"/>
+                                <segments>
+                                    <segment title="Small"/>
+                                    <segment title="Medium"/>
+                                    <segment title="Large"/>
+                                </segments>
+                            </segmentedControl>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Hbj-Py-pyh">
+                                <rect key="frame" x="87.666666666666686" y="569" width="200" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="8PU-cZ-pcw"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CJ2-Ev-IUy">
+                                <rect key="frame" x="87.666666666666686" y="612" width="200" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="p42-cy-it8"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="jQL-ok-BbD"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="W2v-Ei-K7Y" firstAttribute="height" secondItem="OO0-ft-3g1" secondAttribute="height" multiplier="0.5" id="3DD-uX-6SR"/>
+                            <constraint firstItem="XoR-3S-JRu" firstAttribute="centerX" secondItem="OO0-ft-3g1" secondAttribute="centerX" id="9zh-My-kk1"/>
+                            <constraint firstItem="W2v-Ei-K7Y" firstAttribute="leading" secondItem="jQL-ok-BbD" secondAttribute="leading" id="Le6-iL-pIC"/>
+                            <constraint firstItem="CJ2-Ev-IUy" firstAttribute="top" secondItem="Hbj-Py-pyh" secondAttribute="bottom" constant="9" id="Zpx-aC-rTy"/>
+                            <constraint firstItem="W2v-Ei-K7Y" firstAttribute="top" secondItem="jQL-ok-BbD" secondAttribute="top" id="cAr-BA-az1"/>
+                            <constraint firstItem="CJ2-Ev-IUy" firstAttribute="centerX" secondItem="OO0-ft-3g1" secondAttribute="centerX" id="iND-l3-ibM"/>
+                            <constraint firstItem="XoR-3S-JRu" firstAttribute="top" secondItem="W2v-Ei-K7Y" secondAttribute="bottom" constant="17" id="kxf-di-awj"/>
+                            <constraint firstItem="Hbj-Py-pyh" firstAttribute="top" secondItem="XoR-3S-JRu" secondAttribute="bottom" constant="64" id="pfM-3W-PHU"/>
+                            <constraint firstItem="W2v-Ei-K7Y" firstAttribute="width" secondItem="OO0-ft-3g1" secondAttribute="width" id="u3A-eN-Y4G"/>
+                            <constraint firstItem="Hbj-Py-pyh" firstAttribute="centerX" secondItem="OO0-ft-3g1" secondAttribute="centerX" id="yyp-cg-ZGn"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Add New Order" id="Byz-KL-8Sx"/>
                 </viewController>
