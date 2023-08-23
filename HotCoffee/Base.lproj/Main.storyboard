@@ -85,14 +85,6 @@
                                     <outlet property="delegate" destination="Dcv-KR-iR6" id="JHz-0A-4E1"/>
                                 </connections>
                             </tableView>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="XoR-3S-JRu">
-                                <rect key="frame" x="84.666666666666686" y="474" width="206" height="32"/>
-                                <segments>
-                                    <segment title="Small"/>
-                                    <segment title="Medium"/>
-                                    <segment title="Large"/>
-                                </segments>
-                            </segmentedControl>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Hbj-Py-pyh">
                                 <rect key="frame" x="87.666666666666686" y="569" width="200" height="34"/>
                                 <constraints>
@@ -114,13 +106,11 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="W2v-Ei-K7Y" firstAttribute="height" secondItem="OO0-ft-3g1" secondAttribute="height" multiplier="0.5" id="3DD-uX-6SR"/>
-                            <constraint firstItem="XoR-3S-JRu" firstAttribute="centerX" secondItem="OO0-ft-3g1" secondAttribute="centerX" id="9zh-My-kk1"/>
+                            <constraint firstItem="jQL-ok-BbD" firstAttribute="bottom" secondItem="CJ2-Ev-IUy" secondAttribute="bottom" constant="156" id="FTC-uF-vVf"/>
                             <constraint firstItem="W2v-Ei-K7Y" firstAttribute="leading" secondItem="jQL-ok-BbD" secondAttribute="leading" id="Le6-iL-pIC"/>
                             <constraint firstItem="CJ2-Ev-IUy" firstAttribute="top" secondItem="Hbj-Py-pyh" secondAttribute="bottom" constant="9" id="Zpx-aC-rTy"/>
                             <constraint firstItem="W2v-Ei-K7Y" firstAttribute="top" secondItem="jQL-ok-BbD" secondAttribute="top" id="cAr-BA-az1"/>
                             <constraint firstItem="CJ2-Ev-IUy" firstAttribute="centerX" secondItem="OO0-ft-3g1" secondAttribute="centerX" id="iND-l3-ibM"/>
-                            <constraint firstItem="XoR-3S-JRu" firstAttribute="top" secondItem="W2v-Ei-K7Y" secondAttribute="bottom" constant="17" id="kxf-di-awj"/>
-                            <constraint firstItem="Hbj-Py-pyh" firstAttribute="top" secondItem="XoR-3S-JRu" secondAttribute="bottom" constant="64" id="pfM-3W-PHU"/>
                             <constraint firstItem="W2v-Ei-K7Y" firstAttribute="width" secondItem="OO0-ft-3g1" secondAttribute="width" id="u3A-eN-Y4G"/>
                             <constraint firstItem="Hbj-Py-pyh" firstAttribute="centerX" secondItem="OO0-ft-3g1" secondAttribute="centerX" id="yyp-cg-ZGn"/>
                         </constraints>
