@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-class OrdersTableViewController: UITableViewController {
+class OrdersTableViewController: UITableViewController, AddCoffeeOrderDelegate {
     
     var orderListViewModel = OrderListViewModel()
     
@@ -17,11 +17,19 @@ class OrdersTableViewController: UITableViewController {
         populateOrders()
     }
     
+    // delefate function of AddCoffeeOrderDelegate
+    func addCoffeeOrderViewControllerDidClose(controller: UIViewController) {
+        controller.dismiss(animated: true, completion: nil)
+    }
+    
+    func addCoffeeOrderViewControllerDidSave(order: Order, controller: UIViewController) {
+        controller.dismiss(animated: true, completion: nil)
+        let orderVM = OrderViewModel(order: order)
+        self.orderListViewModel.ordersViewModel.append(orderVM)
+        self.tableView.insertRows(at: [IndexPath.init(row: self.orderListViewModel.ordersViewModel.count - 1, section: 0)], with: .automatic)
+    }
+    
     private func populateOrders() {
-        guard let coffeeOrdersURL = URL(string: "https://mocki.io/v1/b7df8914-349b-4bc6-bd33-c697cfa6e394") else {
-            fatalError("URL was incorrect")
-        }
-        
         Webservice().load(resource: Order.all) { [weak self] result in
             
             switch result {
@@ -32,6 +40,16 @@ class OrdersTableViewController: UITableViewController {
                     print(error)
             }
         }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        guard let navC = segue.destination as? UINavigationController,
+              let addCoffeeOrderVC = navC.viewControllers.first as? AddOrderViewController else {
+            fatalError("Error performing segue!")
+        }
+        
+        addCoffeeOrderVC.delegate = self
     }
     
     override func numberOfSections(in tableView: UITableView) -> Int {
