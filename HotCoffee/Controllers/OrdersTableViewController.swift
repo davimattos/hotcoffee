@@ -22,9 +22,7 @@ class OrdersTableViewController: UITableViewController {
             fatalError("URL was incorrect")
         }
         
-        let resource = Resource<[Order]>(url: coffeeOrdersURL)
-        
-        Webservice().load(resource: resource) { [weak self] result in
+        Webservice().load(resource: Order.all) { [weak self] result in
             
             switch result {
                 case .success(let orders):

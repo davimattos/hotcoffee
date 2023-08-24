@@ -115,8 +115,17 @@
                             <constraint firstItem="Hbj-Py-pyh" firstAttribute="centerX" secondItem="OO0-ft-3g1" secondAttribute="centerX" id="yyp-cg-ZGn"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Add New Order" id="Byz-KL-8Sx"/>
+                    <navigationItem key="navigationItem" title="Add New Order" id="Byz-KL-8Sx">
+                        <barButtonItem key="leftBarButtonItem" title="Close" id="RlR-6k-9AK"/>
+                        <barButtonItem key="rightBarButtonItem" title="Save" id="zjb-C3-Htq">
+                            <connections>
+                                <action selector="save" destination="Dcv-KR-iR6" id="sSc-eY-r0X"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
+                        <outlet property="emailTextField" destination="CJ2-Ev-IUy" id="5Uc-IR-ZuJ"/>
+                        <outlet property="nameTextField" destination="Hbj-Py-pyh" id="vb8-G5-fFN"/>
                         <outlet property="tableView" destination="W2v-Ei-K7Y" id="yKp-FE-j9z"/>
                     </connections>
                 </viewController>
